@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta charset="viewport" content="width-device-width, initial-scale=1.0" />
+    <title>My World</title>
+    <script>
+      console.log("Yellow World");
+      let myNum = 10;
+      let myStr = "Hello World";
+      let flag = true;
+      // console.log(typeof myNum);
+      // console.log(typeof myStr);
+      // console.log(typeof flag);
+
+      // let numArr = [3, 6, 7, 9, 10];
+      // let fruitArr = ["Apple", "Orange", "Grape"];
+      // console.log(numArr.length);
+      // console.log(fruitArr.length);
+      // console.log(numArr);
+      // console.log(numArr[3]);
+      // fruitArr[1] = "Durian";
+      // console.log(fruitArr[1]);
+
+      // let number1 = 0.3;
+      // let number2 = 0.1 + 0.2;
+      // console.log(number1 == number2);
+
+      let member = {
+        rohimi: {
+          first_name: "rohimi",
+          last_name: "raslam",
+          hobbies: ["anime", "drama", "movie"],
+          favourite_food: ["mee", "nasi", "pau"],
+          pets: ["nyak", "mail", "kelabu"],
+        },
+        jet: {
+          first_name: "jet",
+          last_name: "raslam",
+          hobbies: ["skiing", "surfing", "badminton"],
+          favourite_food: ["wanton", "sushi", "pau"],
+          pets: ["nyak", "mail", "kelabu"],
+        },
+      };
+
+      const keys = Object.keys(member);
+      console.log(keys[0]);
+
+      // function collect_first_name(){
+
+      // }
+
+      // function input_matching(){
+
+      // }
+
+      function full_name() {
+        let name = prompt("enter name: ");
+
+        switch (name) {
+          case "rohimi":
+            let combined_name =
+              member["rohimi"]["first_name"] +
+              " " +
+              member["rohimi"]["last_name"];
+            console.log(combined_name);
+            return combined_name;
+        }
+      }
+
+      // let member_name = full_name();
+      // name_length = member_name.length;
+      // console.log(name_length);
+
+      // full_name();
+
+      // let name = prompt("name? ");
+
+      // switch (name) {
+      //   case "rohimi":
+      // console.log(member[1]["first_name"]);
+      // break;
+      // }
+
+      // let number1, number2;
+      // number1 = Number(prompt("Enter a number: "));
+      // number2 = Number(prompt("Enter a second number: "));
+      // if (number1 > number2) {
+      //   console.log(`${number1} is bigger than ${number2}}`);
+      // } else {
+      //   console.log(`${number2} is bigger than ${number1}`);
+      // }
+
+      // if (number1 > number2) {
+      //   console.log(`${number1} is bigger than ${number2}`);
+      // } else if (number1 === number2) {
+      //   console.log(`${number2} is equal to ${number1}`);
+      // } else {
+      //   console.log(`${number2} is bigger than ${number1}`);
+      // }
+
+      // let day = Number(prompt("enter a day (1-7): "));
+
+      // switch (day) {
+      //   case 1:
+      //     console.log("Monday");
+      //     break;
+      //   case 2:
+      //     console.log("Tuesday");
+      //     break;
+      //   case 3:
+      //     console.log("Wednesday");
+      //     break;
+      //   case 4:
+      //     console.log("Thursday");
+      //     break;
+      //   case 5:
+      //     console.log("Friday");
+      //     break;
+      //   case 6:
+      //     console.log("Saturday");
+      //     break;
+      //   case 7:
+      //     console.log("Sunday");
+      //     break;
+      // }
+
+      // let arr1 = [4, 5, 6, 10, 12];
+      // let total = 0;
+
+      // for (let i = 0; i < arr1.length; i++) {
+      //   total += arr1[i];
+      // }
+
+      // console.log(total);
+
+      // let num = 0;
+      // let total = 0;
+
+      // while (num < 8) {
+      //   num = Math.floor(Math.random() * 10 + 1);
+      //   console.log(num);
+      //   total += num;
+      // }
+
+      // let num1 = Math.random();
+      // let num2 = Math.floor(Math.random() * 10);
+      // let num3 = Math.floor(Math.random());
+      // console.log(num1);
+      // console.log(num2);
+      // console.log(num3);
+
+      // let number;
+      // let total = 0;
+
+      // do {
+      //   number = Math.floor(Math.random() * 10 + 1);
+      //   console.log(number);
+      //   total += number;
+      // } while (number < 8);
+
+      // console.log("the sum of number is " + total);
+
+      // let number = 7;
+
+      // if (number > 0 && number < 10) {
+      //   console.log("number is abpve zero but below 10.");
+      // } else {
+      //   console.log("number is not in the range.");
+      // }
+
+      // if (number === 3 || number === 7) {
+      //   console.log("number is either 3 or 7.");
+      // } else {
+      //   console.log("nummber doesn't match with any target value.");
+      // }
+
+      // let my_name = prompt("enter name: ");
+
+      // function print_name(my_name) {
+      //   console.log("my name is " + my_name);
+      // }
+
+      // print_name(my_name);
+
+      // function addition(num1, num2) {
+      //   let result = num1 + num2;
+      //   return result;
+      // }
+
+      // let number1 = parseInt(prompt("enter a positive number: "));
+      // let number2 = parseInt(prompt("enter a positive number: "));
+
+      // let addition_result = addition(number1, number2);
+      // console.log("the addition result is " + addition_result);
+
+      // let number1 = parseInt(prompt("enter a positive number: "));
+      // let number2 = parseInt(prompt("enter a positive number: "));
+
+      // let addition = function (num1, num2) {
+      //   return num1 + num2;
+      // };
+
+      // console.log("the result of addition is " + addition(number1, number2));
+
+      // let greetings = function (first, second) {
+      //   return first + " " + second;
+      // };
+
+      // console.log(greetings("hello", "world"));
+
+      // let greet = () => "Good Morning";
+      // let message = greet();
+      // console.log(greet);
+
+      // let hello = () => "hello world";
+      // let results = hello();
+      // console.log(results);
+
+      // let greet = () => "good morning";
+      // let message = greet();
+      // console.log(message);
+
+      // let addition = (num1, num2) => num1 + num2;
+      // let calc_result = addition(5, 6);
+      // console.log(calc_result);
+
+      // let num = 13;
+      // let check_even =
+      //   num % 2 === 0 ? () => console.log("even") : () => console.log("odd");
+
+      // check_even();
+    </script>
+  </head>
+  <body>
+    <h1>My first World</h1>
+  </body>
+</html>
