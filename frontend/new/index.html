@@ -11,22 +11,63 @@
       let myStr = "Hello World";
       let flag = true;
 
-      // let member = {
-      //   rohimi: {
-      //     first_name: "rohimi",
-      //     last_name: "raslam",
-      //     hobbies: ["anime", "drama", "movie"],
-      //     favourite_food: ["mee", "nasi", "pau"],
-      //     pets: ["nyak", "mail", "kelabu"],
-      //   },
-      //   jet: {
-      //     first_name: "jet",
-      //     last_name: "raslam",
-      //     hobbies: ["skiing", "surfing", "badminton"],
-      //     favourite_food: ["wanton", "sushi", "pau"],
-      //     pets: ["nyak", "mail", "kelabu"],
-      //   },
-      // };
+      const member = {
+        rohimi: {
+          first_name: "rohimi",
+          last_name: "raslam",
+          hobbies: ["anime", "drama", "movie"],
+          favourite_food: ["mee", "nasi", "pau"],
+          pets: ["nyak", "mail", "kelabu"],
+        },
+        azman: {
+          first_name: "azman",
+          last_name: "hadi",
+          hobbies: ["skiing", "surfing", "badminton"],
+          favourite_food: ["wanton"],
+          pets: ["tommy", "kimmy", "jerry"],
+        },
+      };
+
+      let initial = prompt("enter name: ");
+
+      function get_full_name(name) {
+        return `${member[name].first_name} ${member[name].last_name}`;
+      }
+
+      function check_vowel(name) {
+        const vowel = "aeiou";
+        const member_full_name = get_full_name(name);
+        let vowel_count = 0;
+
+        for (let i = 0; i < member_full_name.length; i++) {
+          if (vowel.includes(member_full_name[i])) {
+            vowel_count++;
+          }
+        }
+
+        return vowel_count;
+      }
+
+      function check_if_food_lover(name) {
+        if (member[name].favourite_food.length > 1) {
+          return "is";
+        } else {
+          return "is not";
+        }
+      }
+
+      function check_if_pet_keeper(name) {
+        if (member[name].pets.length > 1) {
+          return "is";
+        } else {
+          return "is not";
+        }
+      }
+
+      console.log("full name is ", get_full_name(initial));
+      console.log("no. of vowel in the full name is ", check_vowel(initial));
+      console.log(`${initial}`, check_if_food_lover(initial), "a food lover");
+      console.log(`${initial}`, check_if_pet_keeper(initial), "a pet keeper");
     </script>
   </head>
   <body>
