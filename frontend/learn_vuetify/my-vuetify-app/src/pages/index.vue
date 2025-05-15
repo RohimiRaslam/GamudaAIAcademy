@@ -242,14 +242,38 @@
     </v-col>
   </v-row> -->
 
-  <v-btn class="ma-5" v-tooltip="'Tooltip'">Hover me</v-btn>
+  <!-- <v-btn class="ma-5" v-tooltip="'Tooltip'">Hover me</v-btn>
   <div class="d-flex justify-center ga-4 py-10">
     <v-btn v-tooltip:start="'Tooltip at the start'">start</v-btn>
     <v-btn v-tooltip:end="'Tooltip at the end'">end</v-btn>
     <v-btn v-tooltip:top="'Tooltip at the top'">top</v-btn>
     <v-btn v-tooltip:bottom="'Tooltip at the bottom'">bottom</v-btn>
     <v-btn v-tooltip:bottom-end="'Tooltip at the bottom-end'">bottom-end</v-btn>
-  </div>
+  </div> -->
+
+  <v-app>
+    <div class="elevation-2 pa-4">Dashboard</div>
+
+    <v-container>
+      <v-row justify="space between">
+        <v-col cols="4">
+          <v-card title="sales Overview" text="15% increase"></v-card>
+        </v-col>
+        <v-col>
+          <v-card title="Customer Growth" text="10 new customer"></v-card>
+        </v-col>
+        <v-col>
+          <v-card title="Website Traffic" text="50k Visitors"></v-card>
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-col>
+          <v-card title="Recent Orders"> </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-app>
 </template>
 
 <style>
