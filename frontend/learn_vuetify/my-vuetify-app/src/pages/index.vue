@@ -251,7 +251,7 @@
     <v-btn v-tooltip:bottom-end="'Tooltip at the bottom-end'">bottom-end</v-btn>
   </div> -->
 
-  <v-app>
+  <!-- <v-app>
     <div class="elevation-2 pa-4">Dashboard</div>
 
     <v-container>
@@ -273,7 +273,11 @@
         </v-col>
       </v-row>
     </v-container>
-  </v-app>
+  </v-app> -->
+
+  <ul>
+    <li v-for="fruit in fruits" :key="fruit">{{ fruit }}></li>
+  </ul>
 </template>
 
 <style>
@@ -285,17 +289,6 @@
 </style>
 
 <!-- lang="ts" setup -->
-<script>
-// import { useTheme } from "vuetify";
-// const theme = useTheme();
-// function toggleTHeme() {
-//   theme.global.name.value = theme.global.current.value.dark ? "light" : "dark";
-// }
-export default {
-  data() {
-    return {
-      dialog: false,
-    };
-  },
-};
+<script setup>
+const fruits = ["apple", "banana", "cherry"];
 </script>
