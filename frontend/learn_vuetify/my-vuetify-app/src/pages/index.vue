@@ -1,6 +1,7 @@
 <template>
   <!-- <HelloWorld /> -->
   <!-- <div class="text-center pt-3">centered with padding</div>
+  
   <div class="bg-primary opacity-40 pa-10 text-white text-center pa-3">
     Primary Background
   </div>
@@ -242,36 +243,171 @@
     </v-col>
   </v-row> -->
 
-  <v-btn class="ma-5" v-tooltip="'Tooltip'">Hover me</v-btn>
+  <!-- <v-btn class="ma-5" v-tooltip="'Tooltip'">Hover me</v-btn>
   <div class="d-flex justify-center ga-4 py-10">
     <v-btn v-tooltip:start="'Tooltip at the start'">start</v-btn>
     <v-btn v-tooltip:end="'Tooltip at the end'">end</v-btn>
     <v-btn v-tooltip:top="'Tooltip at the top'">top</v-btn>
     <v-btn v-tooltip:bottom="'Tooltip at the bottom'">bottom</v-btn>
     <v-btn v-tooltip:bottom-end="'Tooltip at the bottom-end'">bottom-end</v-btn>
-  </div>
+  </div> -->
+
+  <!-- <v-app>
+    <div class="elevation-2 pa-4">Dashboard</div>
+
+    <v-container>
+      <v-row justify="space between">
+        <v-col cols="4">
+          <v-card title="sales Overview" text="15% increase"></v-card>
+        </v-col>
+        <v-col>
+          <v-card title="Customer Growth" text="10 new customer"></v-card>
+        </v-col>
+        <v-col>
+          <v-card title="Website Traffic" text="50k Visitors"></v-card>
+        </v-col>
+      </v-row>
+
+      <v-row>
+        <v-col>
+          <v-card title="Recent Orders"> </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-app> -->
+
+  <!-- <ul>
+    <li v-for="fruit in fruits" :key="fruit">{{ fruit }}></li>
+  </ul> -->
+  <!-- 
+    <v-text-field v-model="name" label="Your Name"></v-text-field>
+    <p>Hello, {{ name }}!</p> -->
+
+  <!-- <div>
+    <button @click="counter++">Increment</button>
+    <p>Counter: {{ counter }}</p>
+  </div> -->
+
+  <!-- <v-row>
+    <v-col cols="12">
+      <div>Temperature converter</div>
+    </v-col>
+  </v-row>
+
+  <v-row>
+    <v-col cols="6">
+      <v-text-field
+        v-model="celcius"
+        label="Celcius"
+        type="number"
+        outlined
+      ></v-text-field>
+    </v-col>
+    <v-col cols="6">
+      <v-text-field
+        v-model="fahrenheit"
+        label="fahrenheit"
+        type="number"
+        outlined
+      ></v-text-field>
+    </v-col>
+  </v-row>
+
+  <v-row>
+    <v-col cols="12"> notification</v-col>
+  </v-row> -->
+
+  <!--   
+  <v-app>
+    <v-container>
+      <v-row>
+        <v-col cols="6">
+          <v-card>
+            <div :class="{ active: isActive, error: hasError }">
+              Dynamic Class Example
+            </div>
+          </v-card>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="6">
+          <v-card>
+            <div :style="{ color: textColor, fontSize: fontSize + 'px' }">
+              Dynamic Style Example
+            </div>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-app> -->
+
+  <v-row>
+    <v-col>
+      <h3>Lifecycle Hook Message</h3>
+      <ul>
+        <li v-for="(message, index) in lifecycleLog" :key="index">
+          {{ message }}
+        </li>
+        <v-btn @click="triggerUpdate">trigger Update</v-btn>
+      </ul>
+    </v-col>
+  </v-row>
 </template>
 
-<style>
-/* .custom-btn {
-  background-color: red;
-  color: white;
-  border-radius: 8px;
+<style scoped>
+/* .active {
+  background-color: lightblue;
+}
+
+.error {
+  background-color: lightcoral;
 } */
 </style>
 
-<!-- lang="ts" setup -->
-<script>
-// import { useTheme } from "vuetify";
-// const theme = useTheme();
-// function toggleTHeme() {
-//   theme.global.name.value = theme.global.current.value.dark ? "light" : "dark";
-// }
-export default {
-  data() {
-    return {
-      dialog: false,
-    };
-  },
-};
+<script setup>
+import { ref } from "vue";
+const lifecycleLog = ref([]);
+let isManualUpdate = ref(false);
+
+onBeforeMount(() => {
+  lifecycleLog.value.push("Component is about to mount!");
+});
+
+onMounted(() => {
+  lifecycleLog.value.push("Component is now mounted!");
+});
+
+onUpdated(() => {
+  if (isManualUpdate) {
+    lifecycleLog.value.push("Componen has been updated!");
+    isManualUpdate = false;
+  }
+});
+
+function triggerUpdate() {
+  isManualUpdate = true;
+  lifecycleLog.value.push("manual update triggered");
+  console.log(lifecycleLog.value);
+}
+// const isActive = ref(true);
+// const hasError = ref(false);
+// const textColor = ref("blue");
+// const fontSize = ref(24);
+
+// const celcius = ref(0);
+// const fahrenheit = ref(32);
+// const lastConverted = ref("");
+// watch(celcius, (newValue, oldValue) => {
+//   if (newValue != oldValue) {
+//     fahrenheit.value = Number((newValue * 9) / 5 + 32).toFixed(2);
+//     lastConverted.value = "celcius to fahrenheit";
+//   }
+// });
+
+// watch(fahrenheit, (newValue, oldValue) => {
+//   if (newValue != oldValue) {
+//     celcius.value = Number(((newValue - 32) * 5) / 9).toFixed(2);
+//     lastConverted.value = "fahrenheit to celcius";
+//   }
+// });
 </script>
