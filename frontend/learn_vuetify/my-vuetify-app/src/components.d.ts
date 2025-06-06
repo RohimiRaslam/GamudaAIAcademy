@@ -9,8 +9,18 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AppFooter: typeof import('./components/AppFooter.vue')['default']
+    Card: typeof import('./components/Card.vue')['default']
+    CardSlot: typeof import('./components/CardSlot.vue')['default']
+    CustomInput: typeof import('./components/CustomInput.vue')['default']
+    CustomRender: typeof import('./components/CustomRender.vue')['default']
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
+    Navbar: typeof import('./components/Navbar.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Sidebar: typeof import('./components/Sidebar.vue')['default']
+    TaskDraft: typeof import('./components/TaskDraft.vue')['default']
+    TaskItem: typeof import('./components/TaskItem.vue')['default']
+    Tryer: typeof import('./components/tryer.vue')['default']
+    UserCard: typeof import('./components/UserCard.vue')['default']
   }
 }

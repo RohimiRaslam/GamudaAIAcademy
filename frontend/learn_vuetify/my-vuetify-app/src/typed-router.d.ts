@@ -19,7 +19,16 @@ declare module 'vue-router/auto-routes' {
    */
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
+    '/admin': RouteRecordInfo<'/admin', '/admin', Record<never, never>, Record<never, never>>,
+    '/advance_components_paterns': RouteRecordInfo<'/advance_components_paterns', '/advance_components_paterns', Record<never, never>, Record<never, never>>,
     '/class_&_style_binding': RouteRecordInfo<'/class_&_style_binding', '/class_&_style_binding', Record<never, never>, Record<never, never>>,
-    '/tutorial/': RouteRecordInfo<'/tutorial/', '/tutorial', Record<never, never>, Record<never, never>>,
+    '/excercise': RouteRecordInfo<'/excercise', '/excercise', Record<never, never>, Record<never, never>>,
+    '/excercise_ref_components_dataBinding': RouteRecordInfo<'/excercise_ref_components_dataBinding', '/excercise_ref_components_dataBinding', Record<never, never>, Record<never, never>>,
+    '/Homepage': RouteRecordInfo<'/Homepage', '/Homepage', Record<never, never>, Record<never, never>>,
+    '/learnAxios': RouteRecordInfo<'/learnAxios', '/learnAxios', Record<never, never>, Record<never, never>>,
+    '/ref_components_dataBinding': RouteRecordInfo<'/ref_components_dataBinding', '/ref_components_dataBinding', Record<never, never>, Record<never, never>>,
+    '/reusability_composable': RouteRecordInfo<'/reusability_composable', '/reusability_composable', Record<never, never>, Record<never, never>>,
+    '/storrr': RouteRecordInfo<'/storrr', '/storrr', Record<never, never>, Record<never, never>>,
+    '/try': RouteRecordInfo<'/try', '/try', Record<never, never>, Record<never, never>>,
   }
 }
